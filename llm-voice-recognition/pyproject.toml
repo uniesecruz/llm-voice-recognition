@@ -1,0 +1,28 @@
+[project]
+name = "llm-llm-voice-recognition"
+version = "0.1"
+description = "This project provides a blueprint for building a voice-activated assistant powered by a large language model (LLM). It captures spoken input, transcribes it into text, and then leverages a free generative AI to formulate a coherent and contextually relevant response, which is then synthesized back into speech."
+readme = "README.md"
+authors = [{name = "Sérgio Cruz"}]
+license = "Apache-2.0"
+classifiers = []
+requires-python = ">=3.9"
+dependencies = [
+    "llm"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/uniesecruz/llm-llm-voice-recognition"
+Changelog = "https://github.com/uniesecruz/llm-llm-voice-recognition/releases"
+Issues = "https://github.com/uniesecruz/llm-llm-voice-recognition/issues"
+CI = "https://github.com/uniesecruz/llm-llm-voice-recognition/actions"
+
+[project.entry-points.llm]
+llm_voice_recognition = "llm_llm_voice_recognition"
+
+[project.optional-dependencies]
+test = ["pytest"]
