@@ -1,0 +1,24 @@
+Exemplo de Texto para Leitura em Voz Alta
+
+Este é um texto de exemplo que pode ser usado para testar a funcionalidade de leitura de texto personalizado do assistente de voz.
+
+O assistente de voz utiliza diversas tecnologias avançadas:
+
+1. Reconhecimento de Voz: Utiliza o modelo Whisper da OpenAI para converter fala em texto com alta precisão.
+
+2. Processamento de Linguagem: Emprega um modelo Llama quantizado executado localmente para gerar respostas inteligentes.
+
+3. Síntese de Voz: Usa o Google Text-to-Speech (gTTS) para converter texto em fala natural.
+
+4. Orquestração: O LangChain coordena todo o fluxo de processamento.
+
+Características do Sistema:
+- Funciona completamente offline (exceto para síntese de voz)
+- Suporta conversas contínuas
+- Interface amigável com múltiplas opções
+- Tratamento robusto de erros
+- Configurações personalizáveis
+
+O sistema foi desenvolvido para ser uma solução completa de assistente de voz, integrando as melhores tecnologias disponíveis para cada componente.
+
+Teste concluído com sucesso!

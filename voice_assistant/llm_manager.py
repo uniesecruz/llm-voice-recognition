@@ -3,7 +3,7 @@ Módulo para gerenciar a Large Language Model usando LangChain e ctransformers
 """
 from langchain_community.llms import CTransformers
 from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from langchain_core.runnables import RunnableSequence
 from pathlib import Path
 import os
 
@@ -84,12 +84,8 @@ class LLMManager:
             template=prompt_template
         )
         
-        # Cria a cadeia LangChain
-        self.chain = LLMChain(
-            llm=self.llm,
-            prompt=prompt,
-            verbose=False
-        )
+        # Cria a cadeia LangChain usando a nova sintaxe recomendada
+        self.chain = prompt | self.llm
         
         print("Cadeia LangChain configurada!")
     
@@ -106,8 +102,8 @@ class LLMManager:
         try:
             print(f"Processando pergunta: {question}")
             
-            # Gera a resposta usando a cadeia
-            response = self.chain.run(question=question)
+            # Gera a resposta usando a nova sintaxe RunnableSequence
+            response = self.chain.invoke({"question": question})
             
             # Limpa a resposta removendo espaços extras
             response = response.strip()

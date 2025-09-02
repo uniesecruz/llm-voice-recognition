@@ -7,8 +7,11 @@ Um assistente de voz completo que utiliza Whisper para reconhecimento de fala, L
 - **Reconhecimento de Voz**: Utiliza OpenAI Whisper via SpeechRecognition para converter fala em texto
 - **Processamento de Linguagem**: LLM Llama executando localmente via ctransformers
 - **Síntese de Voz**: Google Text-to-Speech (gTTS) para converter texto em fala
+- **Leitura de Texto**: Converte qualquer texto digitado ou arquivo em áudio
 - **Orquestração**: LangChain para gerenciar o fluxo de processamento
-- **Interface**: Modo interativo contínuo ou interações únicas
+- **Interface**: Modo interativo contínuo, interações únicas e leitura personalizada
+- **Tratamento de Erros**: Sistema robusto de recuperação de falhas
+- **Configurações**: Volume, velocidade e idioma ajustáveis
 
 ## 📋 Pré-requisitos
 
@@ -62,7 +65,15 @@ O programa apresentará um menu com as seguintes opções:
 1. **Modo Interativo Contínuo**: O assistente escuta continuamente e responde às suas perguntas
 2. **Interação Única**: Uma única pergunta e resposta
 3. **Testar Componentes**: Testa cada componente individualmente
-4. **Sair**: Encerra o programa
+4. **Ler Texto Personalizado**: Converte texto digitado ou arquivos em áudio
+5. **Sair**: Encerra o programa
+
+### Leitura de Texto Personalizado
+
+A nova funcionalidade permite:
+- **Texto digitado**: Digite qualquer texto para conversão em áudio
+- **Arquivo de texto**: Carregue arquivos .txt para leitura em voz alta
+- **Exemplo**: Use o arquivo `exemplo_texto.txt` incluído para teste
 
 ### Comandos de Voz para Parar
 
